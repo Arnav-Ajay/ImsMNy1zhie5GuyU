@@ -4,6 +4,7 @@
     "X5"
   ],
   "target": "Y",
+  "model": "DecisionTreeClassifier(max_depth=3, min_samples_leaf=1, min_samples_split=2, random_state=42)",
   "cv_accuracy_mean": 0.681846153846154,
   "cv_accuracy_std": 0.0736818685395484,
   "cv_scores": [
@@ -13,5 +14,7 @@
     0.68,
     0.6
   ],
-  "model": "DecisionTreeClassifier(max_depth=3, min_samples_leaf=1, min_samples_split=2, random_state=42)"
+  "holdout_accuracy": 0.8076923076923077,
+  "holdout_split": "80/20 stratified",
+  "random_state": 42
 }

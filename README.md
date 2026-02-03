@@ -43,8 +43,37 @@ depends on model inductive bias:
 Given the strong performance, stability, and interpretability of Decision Trees,
 the final model uses features `X1` and `X5`.
 
+### Evaluation Metrics
+
+Two accuracy metrics are reported:
+
+- **Cross-validated accuracy** (5-fold stratified): used as the primary estimate of
+  generalization performance due to the small dataset size.
+- **Hold-out accuracy** (80/20 stratified split): reported to align with the
+  evaluation criterion specified in the problem statement.
+
+Cross-validation provides a conservative estimate, while the hold-out score
+represents a single-split accuracy comparable to the private test evaluation.
+
+## Model Comparison (Best CV Accuracy)
+
+| Model              | Best CV Accuracy (all features) |Best CV Accuracy (Subset) |
+|--------------------|------------------| ------------------| 
+| Logistic Regression|     0.5717       |     0.6025       |
+| KNN                |     0.6258       |     0.6895       |
+| Decision Tree      |     0.6351       |     0.6982       |
+| Random Forest      |     0.6345       |     0.6751       |
+| Gradient Boosting  |     0.6428       |     0.6905      |
+
+* Saved: models\model.joblib
+* CV accuracy: 0.6818 +/- 0.0737
+* Hold-out accuracy (80/20): 0.8077
+
 
 ## Setup
 ```bash
 pip install -r requirements.txt
-
+python -m src.feature_select            # shows top features for Y
+python -m src.train                     # Trains a decision tree model on X1 and X5 for Y
+python -m src.predict --x1 3 --x5 5     # predict
+```
