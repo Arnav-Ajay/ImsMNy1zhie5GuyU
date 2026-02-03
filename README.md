@@ -43,6 +43,8 @@ depends on model inductive bias:
 Given the strong performance, stability, and interpretability of Decision Trees,
 the final model uses features `X1` and `X5`.
 
+![alt text](data/Figure_1.png)
+
 ### Evaluation Metrics
 
 Two accuracy metrics are reported:
