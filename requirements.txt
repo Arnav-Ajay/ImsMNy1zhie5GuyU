@@ -3,3 +3,9 @@ pandas
 scikit-learn
 matplotlib
 joblib
+pydantic
+fastapi
+uvicorn
+joblib
+pytest
+httpx
